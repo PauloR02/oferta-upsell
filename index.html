@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATENÇÃO: Oferta Única e Inegociável</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080808;
+    --bg-soft:#110f0d;
+    --gold:#d4af37;
+    --gold-light:#f5e096;
+    --gold-glow:rgba(212, 175, 55, 0.25);
+    --red-alert:#e63946;
+    --green-cta:#00b894;
+    --green-cta-hover:#00a383;
+    --text-muted:#a0998e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg);
+    color:#efe9dd;
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:700px; margin:0 auto; padding:32px 20px 80px;}
+
+  .alert-bar {
+    background: #1a0505;
+    border: 1px solid var(--red-alert);
+    color: #ff8e8e;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.2);
+  }
+
+  .kicker{
+    text-align:center;
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:12px;
+    font-weight:800;
+  }
+
+  h1{
+    font-family:'Playfair Display', serif;
+    font-weight:900;
+    text-align:center;
+    font-size:clamp(26px, 5.5vw, 38px);
+    line-height:1.2;
+    color:#ffffff;
+    margin-bottom:20px;
+  }
+  h1 .highlight{
+    color: var(--gold-light);
+    background: linear-gradient(180deg, transparent 65%, rgba(212, 175, 55, 0.3) 65%);
+  }
+  h1 .danger{
+    color: #ff5252;
+  }
+
+  .mockup-container {
+    text-align: center;
+    margin: 28px 0 32px;
+    position: relative;
+  }
+  .mockup-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 380px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9), 0 0 30px var(--gold-glow);
+  }
+
+  .lede{
+    text-align:center;
+    font-size:17px;
+    color:#e0d8c3;
+    margin:0 auto 32px;
+    line-height:1.6;
+  }
+  .lede strong{color:#fff;}
+
+  .divider{
+    width:100px; height:2px; 
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin:32px auto;
+  }
+
+  .panel{
+    background:var(--bg-soft);
+    border:1px solid rgba(212,175,55,0.3);
+    border-radius:16px;
+    padding:32px 24px;
+    margin-bottom:32px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .panel h2{
+    font-family:'Playfair Display', serif;
+    font-size:24px;
+    color:var(--gold-light);
+    margin-bottom:8px;
+    text-align:center;
+  }
+  .panel .subhead {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .list{list-style:none;}
+  .list li{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    font-size:15px;
+    color:#e5ddc9;
+  }
+  .list li:last-child{border-bottom:none;}
+  .list li .badge{
+    flex:0 0 32px;
+    height: 32px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    color:var(--gold-light);
+    font-family:'Playfair Display', serif;
+    font-weight:900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .list li b{color:#ffffff; font-weight: 700;}
+
+  .warning-box {
+    background: rgba(230, 57, 70, 0.08);
+    border-left: 4px solid var(--red-alert);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 28px 0;
+    font-size: 14.5px;
+    color: #f2c4c4;
+  }
+  .warning-box strong { color: #fff; }
+
+  .price-box{
+    text-align:center;
+    padding:32px 20px 16px;
+    background: linear-gradient(180deg, #161411 0%, #0d0c0a 100%);
+    border: 1px solid rgba(212,175,55,0.4);
+  }
+  .price-tag {
+    display: inline-block;
+    background: rgba(212,175,55,0.15);
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .old-price{
+    color:var(--text-muted);
+    text-decoration:line-through;
+    font-size:18px;
+  }
+  .new-price{
+    font-family:'Playfair Display', serif;
+    font-size:56px;
+    font-weight:900;
+    color:#ffffff;
+    margin:2px 0;
+    text-shadow: 0 0 20px rgba(212,175,55,0.3);
+  }
+  .new-price small{font-size:22px; font-weight:700; color:var(--gold-light);}
+  .price-note{font-size:13px; color:var(--text-muted); margin-bottom:28px;}
+
+  .cta-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    margin: 8px auto 4px;
+  }
+
+  cakto-upsell-accept::part(button){
+    background: linear-gradient(180deg, #00d2a3, #008f70);
+    color: #ffffff;
+    font-family:'Inter', sans-serif;
+    font-weight:900;
+    font-size:20px;
+    padding:20px 24px;
+    border-radius:12px;
+    border:none;
+    box-shadow:0 10px 35px rgba(0, 210, 163, 0.4);
+    width: 100%;
+    max-width: 520px;
+    cursor:pointer;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease;
+  }
+  cakto-upsell-accept::part(button):hover {
+    transform: scale(1.02);
+  }
+
+  cakto-upsell-reject::part(button){
+    background:transparent;
+    color: #7a7469;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    text-decoration:underline;
+    border:none;
+    padding:12px;
+    cursor:pointer;
+  }
+  cakto-upsell-reject::part(button):hover {
+    color: #a0998e;
+  }
+
+  .reassurance{
+    text-align:center;
+    font-size:12px;
+    color:var(--text-muted);
+    margin-top:20px;
+    max-width:460px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .urgency{
+    text-align:center;
+    font-size:13.5px;
+    color:#ff5252;
+    margin-top:16px;
+    font-weight:700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="alert-bar">
+    ⚠️ NÃO FECHE ESTA PÁGINA. SEU PEDIDO AINDA NÃO FOI FINALIZADO.
+  </div>
+
+  <div class="kicker">ETAPA FINAL — ACESSO PRIVADO EXCLUSIVO</div>
+
+  <h1>Você tem a teoria... Mas vai travar na hora de <span class="highlight">mandar a mensagem?</span></h1>
+  
+  <p class="lede">
+    Saber como a mente feminina funciona é só metade do jogo. <strong>Se você errar uma única palavra no WhatsApp, ela ignora, visualiza e não responde.</strong>
+  </p>
+
+  <div class="mockup-container">
+    <img src="https://lh3.googleusercontent.com/d/1yA6_A5w1_C6p_M52Wc4g3GqXnK5j1J8x" alt="Mockup 100 Scripts e Respostas Prontas">
+  </div>
+
+  <p class="lede" style="font-size: 18px;">
+    Para não perder o investimento que você acabou de fazer, eu criei o <strong>Atalho Supremo de Execução:</strong>
+  </p>
+
+  <div class="panel">
+    <h2>100 SCRIPTS E RESPOSTAS PRONTAS</h2>
+    <p class="subhead">O arsenal de Copiar & Colar para qualquer situação no WhatsApp ou Instagram</p>
+    
+    <ul class="list">
+      <li>
+        <span class="badge">01</span>
+        <span><b>15 Aberturas Hipnóticas:</b> Mensagens testadas que fazem qualquer mulher responder imediatamente, sem parecer forçado.</span>
+      </li>
+      <li>
+        <span class="badge">02</span>
+        <span><b>15 Viradas de Chave (Tensão Sexual):</b> Como transformar um papo morno em uma conversa carregada de desejo em 3 mensagens.</span>
+      </li>
+      <li>
+        <span class="badge">03</span>
+        <span><b>15 Respostas de Impacto para Objeções:</b> Destrua testes como <i>"Tenho namorado"</i>, <i>"Você é muito de fofoca"</i> ou <i>"Não te conheço"</i> mantendo o controle total.</span>
+      </li>
+      <li>
+        <span class="badge">04</span>
+        <span><b>12 Scripts de Reativação de Vácuo:</b> Traga de volta conversas "mortas" há semanas sem demonstrar um pingo de carentice.</span>
+      </li>
+      <li>
+        <span class="badge">05</span>
+        <span><b>12 Fechamentos de Encontro:</b> O método exato para propor o encontro de forma dominante onde ela simplesmente diz "sim".</span>
+      </li>
+      <li>
+        <span class="badge">06</span>
+        <span><b>10 Scripts de Reconquista / Reabertura:</b> Reative o interesse daquela mulher específica que se afastou ou perdeu o encanto.</span>
+      </li>
+      <li>
+        <span class="badge">07</span>
+        <span><b>12 Respostas Magnéticas para Stories:</b> Como interagir nas fotos dela de forma cirúrgica para gerar atração imediata.</span>
+      </li>
+      <li>
+        <span class="badge">08</span>
+        <span><b>9 Scripts de Manutenção de Interesse:</b> Mantenha a expectativa e o desejo no alto entre o dia do convite e o dia do encontro.</span>
+      </li>
+    </ul>
+
+    <div class="warning-box">
+      <strong>Aviso de Eficiência:</strong> Este material não traz frases clichês da internet. São roteiros estratégicos desenhados para agir diretamente nos gatilhos emocionais dela. Você só precisa <u>copiar, colar e colher o resultado</u>.
+    </div>
+  </div>
+
+  <div class="panel price-box">
+    <span class="price-tag">Desconto Único de Upsell (-50%)</span>
+    <div class="old-price">De R$ 97,00</div>
+    <div class="new-price"><small>R$</small> 47,90</div>
+    <div class="price-note">Adicionado instantaneamente à sua área de membros · Cobrança em 1-Clique</div>
+
+    <div class="cta-wrap">
+      <cakto-upsell-buttons>
+        <cakto-upsell-accept
+          bg-color="#0f7865"
+          text-color="#ffffff"
+          upsell-accept-url="members_area"
+          offer-id="gyhbs5e"
+          app-base-url="https://app.cakto.com.br"
+          offer-type="upsell"
+          upsell-reject-url="https://paulor02.github.io/oferta-downsell/"
+        >
+          SIM! QUERO COPIAR E COLAR OS 100 SCRIPTS
+        </cakto-upsell-accept>
+        <cakto-upsell-reject
+          upsell-reject-url="https://paulor02.github.io/oferta-downsell/"
+        >
+          Não, prefiro tentar inventar minhas próprias mensagens e correr o risco de levar vácuo
+        </cakto-upsell-reject>
+      </cakto-upsell-buttons>
+    </div>
+
+    <div class="urgency">
+      <span>🔒 Esta oportunidade só é válida neste segundo. Se fechar esta página, o valor volta para R$97,00.</span>
+    </div>
+  </div>
+
+  <p class="reassurance">
+    <strong>Compra em 1-Clique Segura:</strong> A cobrança de R$ 47,90 será realizada no mesmo método de pagamento selecionado na tela anterior. Seus dados estão 100% protegidos.
+  </p>
+
+</div>
+
+<script type="text/javascript" src="https://caktoscripts.nyc3.cdn.digitaloceanspaces.com/upsell.js"></script>
+</body>
+</html>
